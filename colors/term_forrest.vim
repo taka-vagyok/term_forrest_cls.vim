@@ -67,7 +67,7 @@ hi Error	ctermfg=0  ctermbg=14
 hi Todo     ctermfg=15 ctermbg=6
 
 " color terminal definitions
-hi NonText	cterm=bold ctermfg=15 ctermbg=2
+hi NonText	cterm=bold ctermfg=2 ctermbg=0
 
 "}}}
 
