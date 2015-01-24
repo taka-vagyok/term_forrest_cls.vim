@@ -28,7 +28,7 @@ let g:colors_name="term_forrest"
 " General ColorScheme for Terminal {{{
 
 " Normal
-hi Normal   ctermfg=7 "gray
+hi Normal   ctermfg=7 ctermbg=0 "gray
 
 " Constant
 hi Constant	ctermfg=15
