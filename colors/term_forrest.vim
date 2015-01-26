@@ -1,23 +1,16 @@
 " Vim color file
 " Maintainer:	taka-vagyok <taka.vagyok@gmail.com>
 " Last Change:	$Date: 2015/01/24 23:05:00 $
-" URL:		http://github.com/taka-vagyok/term_forrest_cls-vim/term_forrest.vim
+" URL:		http://github.com/taka-vagyok/term_forrest_cls-vim/
 
 " cool help screens
 " :he group-name
 " :he highlight-groups
 " :he cterm-colors
 
-if has("gui")
-    " This term don't have gui color scheme so skip this process
-    " echo "term_forrest has no gui colorscheme. finishing..."
-    finish
-endif
-
 set background=dark
 if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
+    " no guarantees for version 5.8 and below, but this makes it stop complaining
     hi clear
     if exists("syntax_on")
         syntax reset
@@ -28,61 +21,47 @@ let g:colors_name="term_forrest"
 " General ColorScheme for Terminal {{{
 
 " Normal
-hi Normal   ctermfg=7 ctermbg=0 "gray
-
+hi Normal       guifg=gray guibg=black ctermfg=7 ctermbg=0
+hi NonText      guifg=darkgreen        ctermfg=2 ctermbg=0 cterm=bold
 " Constant
-hi Constant	ctermfg=15
-hi String	ctermfg=2
-
+hi Constant	    guifg=white            ctermfg=15
+hi String	    guifg=darkgreen        ctermfg=2
 " Comment
-hi Comment	ctermfg=7
-
+hi Comment	    guifg=darkgray         ctermfg=7
 " Identifier
-hi Identifier	ctermfg=11
-hi Function     ctermfg=10 "green
-
+hi Identifier	guifg=cyan             ctermfg=11
+hi Function     guifg=green            ctermfg=10
 "Statement
-hi Statement	ctermfg=10 "green
-
+hi Statement	guifg=green            ctermfg=10
 "Preproc
-hi PreProc	ctermfg=2 "green
-hi Operator	ctermfg=2 "green
-
+hi PreProc	    guifg=darkgreen        ctermfg=2
+hi Operator	    guifg=darkgreen        ctermfg=2
 " Type
-hi Type		ctermfg=11 "cyan
-
+hi Type		    guifg=cyan            ctermfg=11
 " Special
-hi Special	ctermfg=6
-hi SpecialKey ctermfg=10
-
+hi Special	   guifg=darkyellow       ctermfg=6
+hi SpecialKey  guifg=green            ctermfg=10
 " Underline
-hi Underlined	cterm=underline ctermfg=11 ctermbg=1
-
+hi Underlined  guifg=cyan guibg=darkblue ctermfg=11 ctermbg=1 cterm=underline
 " Ignore
-hi Ignore	cterm=bold ctermfg=7
-hi Ignore	ctermfg=6
-
+hi Ignore	   guifg=gray        ctermfg=7 cterm=bold
 "Error
-hi Error	ctermfg=0  ctermbg=14
-hi Todo     ctermfg=15 ctermbg=6
-
-" color terminal definitions
-hi NonText	cterm=bold ctermfg=2 ctermbg=0
-
-"}}}
+hi Error	   guifg=black guibg=yellow      ctermfg=0  ctermbg=14
+hi Todo        guifg=black guibg=darkyellow  ctermfg=0  ctermbg=6
+"General }}}
 
 " Cmd Operations {{{
 
 " Search {{{
-hi IncSearch	cterm=NONE ctermfg=grey ctermbg=darkgreen
-hi Search		cterm=NONE ctermfg=grey ctermbg=blue
+hi IncSearch	guifg=grey guibg=darkgreen  cterm=NONE ctermfg=7 ctermbg=2
+hi Search		guifg=grey guibg=blue       cterm=NONE ctermfg=7 ctermbg=9
 " }}}
 
 " Diff {{{
-hi DiffAdd	    ctermfg=8  ctermbg=1
-hi DiffChange	ctermfg=8  ctermbg=0
-hi DiffDelete	ctermfg=8  ctermbg=1
-hi DiffText	    ctermfg=14  ctermbg=6
+hi DiffAdd	    guifg=darkgray guibg=darkblue ctermfg=8  ctermbg=1
+hi DiffChange	guifg=darkgray guibg=black    ctermfg=8  ctermbg=0
+hi DiffDelete	guifg=darkgray guibg=darkblue ctermfg=8  ctermbg=1
+hi DiffText	    guifg=yellow   guibg=darkyellow    ctermfg=14  ctermbg=6
 "}}}
 
 " Visual mode {{{
@@ -91,14 +70,14 @@ hi VisualNOS	cterm=bold,underline
 "}}}
 
 " File mode{{{
-hi Directory	ctermfg=darkyellow
-hi File	        ctermfg=gray
+hi Directory	guifg=darkyellow ctermfg=6
+hi File	        guifg=grey ctermfg=7
 "}}}
 
 " Spells {{{
-hi SpelLocal   ctermfg=0  ctermbg=11
-hi SpellRare   ctermfg=15 ctermbg=6
-hi SpellBad    ctermfg=15 ctermbg=14
+hi SpelLocal   guifg=black guibg=cyan   ctermfg=0  ctermbg=11
+hi SpellRare   guifg=white guibg=darkyellow  ctermfg=15 ctermbg=6
+hi SpellBad    guifg=black guibg=yellow ctermfg=0   ctermbg=14
  "}}}
 
 "Cmd }}}
@@ -106,35 +85,35 @@ hi SpellBad    ctermfg=15 ctermbg=14
 " Term Window/Tab(s) {{{
 
 " Fold Setting{{{
-hi Folded	ctermfg=darkgrey ctermbg=NONE
-hi FoldColumn	ctermfg=darkgrey ctermbg=NONE
+hi Folded	    guifg=gray guibg=NONE ctermfg=8 ctermbg=NONE
+hi FoldColumn	guifg=grey guibg=NONE ctermfg=8 ctermbg=NONE
 "}}}
 
 " Messages {{{
 hi Question		ctermfg=3
-hi ErrorMsg		cterm=bold ctermfg=0 ctermbg=14
-hi MoreMsg		cterm=NONE ctermfg=7 ctermbg=8
-hi ModeMsg		cterm=NONE ctermfg=8 ctermbg=1
-hi WarningMsg	ctermfg=15 ctermbg=6
+hi ErrorMsg		guifg=black    guibg=yellow   cterm=bold ctermfg=0 ctermbg=14
+hi MoreMsg		guifg=grey     guibg=darkgrey cterm=NONE ctermfg=7 ctermbg=8
+hi ModeMsg		guifg=darkgrey guibg=darkblue cterm=NONE ctermfg=8 ctermbg=1
+hi WarningMsg	guifg=white    guibg=darkyellow    ctermfg=15 ctermbg=6
 "}}}
 
 " Tabs{{{
-hi TabLine		ctermfg=8  ctermbg=0
-hi TabLineSel	ctermfg=0  ctermbg=15
-hi TabLineFill	ctermfg=8  ctermbg=0
+hi TabLine		guifg=darkgrey guibg=black ctermfg=8  ctermbg=0
+hi TabLineSel	guifg=black    guibg=white ctermfg=0  ctermbg=15
+hi TabLineFill	guifg=darkgrey guibg=black ctermfg=8  ctermbg=0
 "}}}
 
-" Complement {{{
-hi Pmenu        ctermfg=15  ctermbg=8
-hi PmenuSel     ctermfg=10  ctermbg=8
-hi PmenuSbar    ctermfg=0   ctermbg=8
-hi PmenuThumb   ctermfg=0   ctermbg=7
-hi WildMenu		ctermfg=15  ctermbg=8
+" Popup menus {{{
+hi Pmenu        guifg=black      guibg=darkgrey   ctermfg=0   ctermbg=8
+hi PmenuSel     guifg=darkgrey   guibg=darkcyan   ctermfg=8   ctermbg=3
+hi PmenuSbar    guifg=black      guibg=darkgrey   ctermfg=0   ctermbg=8
+hi PmenuThumb   guifg=black      guibg=grey       ctermfg=0   ctermbg=7
+hi WildMenu		guifg=black      guibg=darkgrey   ctermfg=0   ctermbg=8
 "}}}
 
 "Others {{{
-hi Title		ctermfg=10
-hi LineNr		ctermfg=3
+hi Title		guifg=green    ctermfg=10
+hi LineNr		guifg=darkcyan ctermfg=3
 hi VertSplit	cterm=reverse
 hi StatusLine	cterm=bold,reverse
 hi StatusLineNC cterm=reverse
