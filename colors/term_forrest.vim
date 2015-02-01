@@ -21,63 +21,63 @@ let g:colors_name="term_forrest"
 " General ColorScheme for Terminal {{{
 
 " Normal
-hi Normal       guifg=gray guibg=black ctermfg=7 ctermbg=0
-hi NonText      guifg=darkgreen        ctermfg=2 ctermbg=0 cterm=bold
+hi Normal       guifg=gray guibg=black ctermfg=gray ctermbg=black
+hi NonText      guifg=darkgreen        ctermfg=darkgreen ctermbg=black cterm=bold
 " Constant
-hi Constant	    guifg=white            ctermfg=15
-hi String	    guifg=darkgreen        ctermfg=2
+hi Constant	    guifg=white            ctermfg=white
+hi String	    guifg=darkgreen        ctermfg=darkgreen
 " Comment
-hi Comment	    guifg=darkgray         ctermfg=7
+hi Comment	    guifg=darkgray         ctermfg=gray
 " Identifier
-hi Identifier	guifg=cyan             ctermfg=11
-hi Function     guifg=green            ctermfg=10
+hi Identifier	guifg=cyan             ctermfg=cyan
+hi Function     guifg=green            ctermfg=green
 "Statement
-hi Statement	guifg=green            ctermfg=10
+hi Statement	guifg=green            ctermfg=green
 "Preproc
-hi PreProc	    guifg=darkgreen        ctermfg=2
-hi Operator	    guifg=darkgreen        ctermfg=2
+hi PreProc	    guifg=darkgreen        ctermfg=darkgreen
+hi Operator	    guifg=darkgreen        ctermfg=darkgreen
 " Type
-hi Type		    guifg=cyan            ctermfg=11
+hi Type		    guifg=cyan            ctermfg=cyan
 " Special
-hi Special	   guifg=darkyellow       ctermfg=6
-hi SpecialKey  guifg=green            ctermfg=10
+hi Special	   guifg=darkyellow       ctermfg=darkyellow
+hi SpecialKey  guifg=green            ctermfg=green
 " Underline
-hi Underlined  guifg=cyan guibg=darkblue ctermfg=11 ctermbg=1 cterm=underline
+hi Underlined  guifg=cyan guibg=darkblue ctermfg=cyan ctermbg=darkblue cterm=underline
 " Ignore
-hi Ignore	   guifg=gray        ctermfg=7 cterm=bold
+hi Ignore	   guifg=gray        ctermfg=gray cterm=bold
 "Error
-hi Error	   guifg=black guibg=yellow      ctermfg=0  ctermbg=14
-hi Todo        guifg=black guibg=darkyellow  ctermfg=0  ctermbg=6
+hi Error	   guifg=black guibg=yellow      ctermfg=black  ctermbg=yellow
+hi Todo        guifg=black guibg=darkyellow  ctermfg=black  ctermbg=darkyellow
 "General }}}
 
 " Cmd Operations {{{
 
 " Search {{{
-hi IncSearch	guifg=grey guibg=darkgreen  cterm=NONE ctermfg=7 ctermbg=2
-hi Search		guifg=grey guibg=blue       cterm=NONE ctermfg=7 ctermbg=9
+hi IncSearch	guifg=gray guibg=darkgreen  ctermfg=darkgreen ctermbg=gray
+hi Search		guifg=gray guibg=blue       ctermfg=gray ctermfg=blue
 " }}}
 
 " Diff {{{
-hi DiffAdd	    guifg=darkgray guibg=darkblue ctermfg=8  ctermbg=1
-hi DiffChange	guifg=darkgray guibg=black    ctermfg=8  ctermbg=0
-hi DiffDelete	guifg=darkgray guibg=darkblue ctermfg=8  ctermbg=1
-hi DiffText	    guifg=yellow   guibg=darkyellow    ctermfg=14  ctermbg=6
+hi DiffAdd	    guifg=darkgray guibg=darkblue   ctermfg=darkgray  ctermbg=darkblue
+hi DiffChange	guifg=darkgray guibg=black      ctermfg=darkgray  ctermbg=black
+hi DiffDelete	guifg=darkgray guibg=darkblue   ctermfg=darkgray  ctermbg=darkblue
+hi DiffText	    guifg=yellow   guibg=darkyellow ctermfg=darkgray  ctermbg=darkyellow
 "}}}
 
 " Visual mode {{{
-hi Visual		cterm=reverse
+hi Visual		guifg=black    guibg=gray       ctermfg=black     ctermbg=gray
 hi VisualNOS	cterm=bold,underline
 "}}}
 
 " File mode{{{
-hi Directory	guifg=darkyellow ctermfg=6
-hi File	        guifg=grey ctermfg=7
+hi Directory	guifg=darkyellow ctermfg=darkyellow
+hi File	        guifg=gray       ctermfg=gray
 "}}}
 
 " Spells {{{
-hi SpelLocal   guifg=black guibg=cyan   ctermfg=0  ctermbg=11
-hi SpellRare   guifg=white guibg=darkyellow  ctermfg=15 ctermbg=6
-hi SpellBad    guifg=black guibg=yellow ctermfg=0   ctermbg=14
+hi SpelLocal   guifg=black guibg=cyan       ctermfg=black ctermbg=cyan
+hi SpellRare   guifg=white guibg=darkyellow ctermfg=white ctermbg=darkyellow
+hi SpellBad    guifg=black guibg=yellow     ctermfg=black ctermbg=yellow
  "}}}
 
 "Cmd }}}
@@ -85,35 +85,35 @@ hi SpellBad    guifg=black guibg=yellow ctermfg=0   ctermbg=14
 " Term Window/Tab(s) {{{
 
 " Fold Setting{{{
-hi Folded	    guifg=gray guibg=NONE ctermfg=8 ctermbg=NONE
-hi FoldColumn	guifg=grey guibg=NONE ctermfg=8 ctermbg=NONE
+hi Folded	    guifg=gray guibg=NONE ctermfg=darkgray ctermbg=NONE
+hi FoldColumn	guifg=gray guibg=NONE ctermfg=darkgray ctermbg=NONE
 "}}}
 
 " Messages {{{
-hi Question		ctermfg=3
-hi ErrorMsg		guifg=black    guibg=yellow   cterm=bold ctermfg=0 ctermbg=14
-hi MoreMsg		guifg=grey     guibg=darkgrey cterm=NONE ctermfg=7 ctermbg=8
-hi ModeMsg		guifg=darkgrey guibg=darkblue cterm=NONE ctermfg=8 ctermbg=1
-hi WarningMsg	guifg=white    guibg=darkyellow    ctermfg=15 ctermbg=6
+hi Question		ctermfg=darkcyan
+hi ErrorMsg		guifg=black    guibg=yellow   cterm=bold ctermfg=black ctermbg=yellow
+hi MoreMsg		guifg=gray     guibg=darkgray cterm=NONE ctermfg=gray ctermbg=darkgray
+hi ModeMsg		guifg=darkgray guibg=darkblue cterm=NONE ctermfg=darkgray ctermbg=darkblue
+hi WarningMsg	guifg=white    guibg=darkyellow    ctermfg=white ctermbg=darkyellow
 "}}}
 
 " Tabs{{{
-hi TabLine		guifg=darkgrey guibg=black ctermfg=8  ctermbg=0
-hi TabLineSel	guifg=black    guibg=white ctermfg=0  ctermbg=15
-hi TabLineFill	guifg=darkgrey guibg=black ctermfg=8  ctermbg=0
+hi TabLine		guifg=darkgray guibg=black ctermfg=darkgray  ctermbg=black
+hi TabLineSel	guifg=black    guibg=white ctermfg=black  ctermbg=darkgray
+hi TabLineFill	guifg=darkgray guibg=black ctermfg=darkgray  ctermbg=black
 "}}}
 
 " Popup menus {{{
-hi Pmenu        guifg=black      guibg=darkgrey   ctermfg=0   ctermbg=8
-hi PmenuSel     guifg=darkgrey   guibg=darkcyan   ctermfg=8   ctermbg=3
-hi PmenuSbar    guifg=black      guibg=darkgrey   ctermfg=0   ctermbg=8
-hi PmenuThumb   guifg=black      guibg=grey       ctermfg=0   ctermbg=7
-hi WildMenu		guifg=black      guibg=darkgrey   ctermfg=0   ctermbg=8
+hi Pmenu        guifg=black      guibg=darkgray   ctermfg=black   ctermbg=darkgray
+hi PmenuSel     guifg=darkgray   guibg=darkcyan   ctermfg=darkgray   ctermbg=darkcyan
+hi PmenuSbar    guifg=black      guibg=darkgray   ctermfg=black   ctermbg=darkgray
+hi PmenuThumb   guifg=black      guibg=gray       ctermfg=black   ctermbg=gray
+hi WildMenu		guifg=black      guibg=darkgray   ctermfg=black   ctermbg=darkgray
 "}}}
 
 "Others {{{
-hi Title		guifg=green    ctermfg=10
-hi LineNr		guifg=darkcyan ctermfg=3
+hi Title		guifg=green    ctermfg=green
+hi LineNr		guifg=darkcyan ctermfg=darkcyan
 hi VertSplit	cterm=reverse
 hi StatusLine	cterm=bold,reverse
 hi StatusLineNC cterm=reverse
